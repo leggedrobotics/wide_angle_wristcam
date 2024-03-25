@@ -1,0 +1,17 @@
+<launch>
+
+  <!-- Static TF Publisher -->
+  <node pkg="tf" type="static_transform_publisher" name="wrist_cam_tf_publisher" args="0 0 0.1 0 0 0 dynaarm_WRIST_2 wrist_cam 1000" output="screen" />
+
+  <!-- Launch ROS Package Template Node -->
+  <node pkg="usb_cam" type="usb_cam_node" name="usb_cam" output="screen">
+    <param name="video_device" value="/dev/video0" />
+    <param name="camera_name" value="wrist_cam" />
+    <param name="image_width" value="640" />
+    <param name="image_height" value="480" />
+    <param name="pixel_format" value="yuyv" />
+    <param name="camera_frame_id" value="wrist_cam" />
+    <param name="io_method" value="mmap"/>
+  </node>
+
+</launch>
