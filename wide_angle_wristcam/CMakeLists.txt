@@ -9,17 +9,17 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 ## enforcing cleaner code.
 add_definitions(-Wall -Werror)
 
-## Find catkin macros and libraries
-find_package(catkin REQUIRED
-  COMPONENTS
-    roscpp
-    sensor_msgs
-    roslint
-)
+# ## Find catkin macros and libraries
+# find_package(catkin REQUIRED
+#   COMPONENTS
+#     roscpp
+#     sensor_msgs
+#     roslint
+# )
 
-## Find system libraries
-find_package(Eigen3 REQUIRED)
-find_package(Boost REQUIRED)
+# ## Find system libraries
+# find_package(Eigen3 REQUIRED)
+# find_package(Boost REQUIRED)
 
 ###################################
 ## catkin specific configuration ##
